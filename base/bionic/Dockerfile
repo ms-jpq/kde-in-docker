@@ -34,34 +34,14 @@ RUN apt install -y locales && \
     update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8
 
 
-## CLI
-RUN apt install -y \
-    python3 python3-pip
-
-
 ## Applications
 RUN apt install -y \
     nautilus firefox konsole
 
 
-# RUN mkdir /tmp/install && \
-#     cd /tmp/install && \
-#     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-ubuntu.git && \
-#     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-containers-for-ubuntu.git
-
-
-# RUN cd /tmp/install/deepin-wine-ubuntu && \
-#     dpkg --add-architecture i386 && \
-#     apt update && \
-#     dpkg -i *.deb || \
-#     apt install -f -y
-
-# RUN cd /tmp/install/deepin-wine-containers-for-ubuntu && \
-#     dpkg -i *.deb || \
-#     apt install -f -y
-# RUN rm /var/lib/dpkg/statoverride && \
-#     touch /var/lib/dpkg/statoverride
-# RUN sed -i 's/WINE_CMD="deepin-wine"/WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"/' /opt/deepinwine/tools/run.sh
+## CLI
+RUN apt install -y \
+    python3 python3-pip git wget
 
 
 WORKDIR /root
