@@ -46,15 +46,15 @@ EXPOSE 8080
 COPY root /
 
 
-# Locale
-RUN apt install -y locales && \
-    locale-gen zh_CN.UTF-8 && \
-    update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8
+# # Locale
+# RUN apt install -y locales && \
+#     locale-gen zh_CN.UTF-8 && \
+#     update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8
 
 
-## Applications
-RUN apt install -y \
-    nautilus firefox konsole
+# ## Applications
+# RUN apt install -y \
+#     nautilus firefox konsole
 
 
 WORKDIR /
