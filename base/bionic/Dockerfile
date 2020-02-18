@@ -32,7 +32,8 @@ EXPOSE 5900
 # NOVNC
 ADD https://github.com/novnc/noVNC/archive/v${NO_VNC_VER}.zip /tmp
 ADD https://github.com/novnc/websockify/archive/v${WEB_SOCK_VER}.zip /tmp
-RUN apt install -y unzip && \
+RUN cd /tmp && \
+    apt install -y unzip python && \
     unzip v${NO_VNC_VER}.zip && \
     unzip v${WEB_SOCK_VER}.zip && \
     mv noVNC-${NO_VNC_VER} /novnc && \
