@@ -1,7 +1,9 @@
 FROM ubuntu:bionic
 
+ARG S6_VER="v1.22.1.0"
+
 ## S6 Overlay
-ADD https://github.com/just-containers/s6-overlay/releases/download/v1.22.1.0/s6-overlay-amd64.tar.gz /tmp
+ADD https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-amd64.tar.gz /tmp
 RUN gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C / && \
     mkdir -p /app /notebooks
 ENTRYPOINT ["/init"]
