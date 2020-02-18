@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv sh
+
+/usr/bin/x11vnc -display "$DISPLAY" -forever -shared -nopw
