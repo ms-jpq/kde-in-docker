@@ -42,8 +42,9 @@ RUN cd /tmp && \
 EXPOSE 8080
 
 
-# All Dependencies Satisfied
-COPY root /
+## Applications
+RUN apt install -y \
+    nautilus firefox konsole
 
 
 # Locale
@@ -52,12 +53,11 @@ RUN apt install -y locales && \
     update-locale LANG=zh_CN.UTF-8 LC_ALL=zh_CN.UTF-8
 
 
-## Applications
-RUN apt install -y \
-    nautilus firefox konsole
-
-
+# All Dependencies Satisfied
+COPY root /
 WORKDIR /
+
+
 # https://github.com/jriddell/kdeneon-docker/issues/1
 # Faulty bluetooth thingy
 RUN rm /usr/share/dbus-1/services/org.bluez.obex.service
