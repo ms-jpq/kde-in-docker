@@ -44,7 +44,7 @@ RUN apt install -y \
     python3 python3-pip git wget
 
 
-WORKDIR /root
+WORKDIR /
 # https://github.com/jriddell/kdeneon-docker/issues/1
 # Faulty bluetooth thingy
 RUN rm /usr/share/dbus-1/services/org.bluez.obex.service

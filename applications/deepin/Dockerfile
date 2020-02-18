@@ -23,3 +23,6 @@ RUN rm /var/lib/dpkg/statoverride && \
 
 # Fix Lang
 RUN sed -i 's/WINE_CMD="deepin-wine"/WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"/' /opt/deepinwine/tools/run.sh
+
+
+WORKDIR /opt/deepinwine/apps
