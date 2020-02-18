@@ -1,4 +1,3 @@
-#!/usr/bin/with-contenv sh
+#!/bin/sh
 
-
-/novnc/utils/launch.sh --listen 8080 --web /novnc
+/novnc/utils/launch.sh
