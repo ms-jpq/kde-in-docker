@@ -1,6 +1,9 @@
 FROM ubuntu:bionic
 
 ARG S6_VER="v1.22.1.0"
+ARG NO_VNC_VER="v1.1.0"
+ARG WEB_SOCK_VER="v0.9.0"
+
 
 ## S6 Overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-amd64.tar.gz /tmp
@@ -24,6 +27,12 @@ ENV DISPLAY=:0 \
     SCR_WIDTH=1600 \
     SCR_HEIGHT=900
 EXPOSE 5900
+
+
+# NOVNC
+ADD https://github.com/novnc/noVNC/archive/${NO_VNC_VER}.zip /tmp
+ADD https://github.com/novnc/websockify/archive/${WEB_SOCK_VER}.zip /tmp
+EXPOSE 8080
 
 
 # All Dependencies Satisfied
