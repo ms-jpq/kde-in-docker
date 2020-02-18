@@ -1,12 +1,12 @@
 FROM ubuntu:bionic
 
-ARG S6_VER="v1.22.1.0"
-ARG NO_VNC_VER="v1.1.0"
-ARG WEB_SOCK_VER="v0.9.0"
+ARG S6_VER="1.22.1.0"
+ARG NO_VNC_VER="1.1.0"
+ARG WEB_SOCK_VER="0.9.0"
 
 
 ## S6 Overlay
-ADD https://github.com/just-containers/s6-overlay/releases/download/${S6_VER}/s6-overlay-amd64.tar.gz /tmp
+ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_VER}/s6-overlay-amd64.tar.gz /tmp
 RUN gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C / && \
     mkdir -p /app /notebooks
 ENTRYPOINT ["/init"]
@@ -30,8 +30,13 @@ EXPOSE 5900
 
 
 # NOVNC
-ADD https://github.com/novnc/noVNC/archive/${NO_VNC_VER}.zip /tmp
-ADD https://github.com/novnc/websockify/archive/${WEB_SOCK_VER}.zip /tmp
+ADD https://github.com/novnc/noVNC/archive/v${NO_VNC_VER}.zip /tmp
+ADD https://github.com/novnc/websockify/archive/v${WEB_SOCK_VER}.zip /tmp
+RUN apt install -y unzip && \
+    unzip v${NO_VNC_VER}.zip && \
+    unzip v${WEB_SOCK_VER}.zip && \
+    mv noVNC-${NO_VNC_VER} /novnc && \
+    mv websockify-${WEB_SOCK_VER} /novnc/utils/websockify
 EXPOSE 8080
 
 
@@ -48,11 +53,6 @@ RUN apt install -y locales && \
 ## Applications
 RUN apt install -y \
     nautilus firefox konsole
-
-
-## CLI
-RUN apt install -y \
-    python3 python3-pip git wget
 
 
 WORKDIR /
