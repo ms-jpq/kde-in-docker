@@ -55,8 +55,14 @@ RUN apt install -y konsole
 
 ## All Dependencies Satisfied
 COPY root /
+
+
+## Setup Root User
+ENV ROOT_PASSWORD=password
+RUN echo "root:$ROOT_PASSWORD" | chpasswd
 WORKDIR /root
 VOLUME /root
 
 
+# Cleanup
 RUN rm -r /_install
