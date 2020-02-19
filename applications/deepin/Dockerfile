@@ -1,5 +1,10 @@
 FROM msjpq/kde-vnc:bionic
 
+# Install Deepin Deps
+# https://github.com/zq1997/deepin-wine
+RUN apt install -y curl && \
+    curl https://deepin-wine.i-m.dev/setup.sh | sh
+
 
 # Pull Deps
 RUN mkdir /tmp/install && \
