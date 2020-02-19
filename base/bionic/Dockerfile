@@ -20,9 +20,7 @@ RUN apt update && \
 
 
 ## NAUTILUS
-run apt install -y nautilus && \
-    mkdir /root/Desktop && \
-    cat /usr/share/applications/nautilus.desktop > /root/Desktop/nautilus.desktop
+run apt install -y nautilus
 
 
 # VNC
@@ -48,7 +46,8 @@ EXPOSE 8080
 
 # All Dependencies Satisfied
 COPY root /
-WORKDIR /
+WORKDIR /root
+VOLUME /root
 
 
 RUN rm -r /_install
