@@ -2,7 +2,9 @@
 
 Docker + VNC + noVNC web UI
 
-Relatively lightweight images of containerized apps.
+**WHY?**
+
+**So you can run KDE inside a browser**
 
 ## Usage
 
