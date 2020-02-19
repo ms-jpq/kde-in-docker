@@ -1,5 +1,7 @@
 FROM msjpq/kde-vnc:bionic
 
+RUN mkdir /_install
+
 # # Install Deepin Deps
 # # https://github.com/zq1997/deepin-wine
 # RUN apt install -y curl && \
@@ -7,8 +9,7 @@ FROM msjpq/kde-vnc:bionic
 
 
 # Pull Deps
-RUN mkdir /_install && \
-    cd /_install && \
+RUN cd /_install && \
     apt install -y git && \
     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-ubuntu.git && \
     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-containers-for-ubuntu.git
@@ -32,3 +33,6 @@ RUN sed -i 's/WINE_CMD="deepin-wine"/WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"/'
 
 
 WORKDIR /opt/deepinwine/apps
+
+
+RUN rm -r /_install

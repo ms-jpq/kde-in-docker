@@ -3,7 +3,7 @@
 set -eu
 set -o pipefail
 
-IMAGE="msjpq/motrix-vnc:bionic"
+IMAGE="msjpq/motrix-vnc:latest"
 
 cd "$(dirname "$0")"
 docker build -t "$IMAGE" .
