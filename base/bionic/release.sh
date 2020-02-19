@@ -3,7 +3,12 @@
 set -eu
 set -o pipefail
 
+IMAGE="msjpq/kde-vnc:bionic"
 
-docker tag "$1" msjpq/kde-vnc:bionic
+cd "$(dirname "$0")"
+docker build -t "$IMAGE" .
 
-docker push msjpq/kde-vnc:bionic
+if [[ $# -gt 0 ]]
+then
+  docker push "$IMAGE"
+fi
