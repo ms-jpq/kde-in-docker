@@ -23,7 +23,7 @@ RUN apt update && \
 run apt install -y nautilus
 
 
-# VNC
+## VNC
 RUN apt install -y xvfb x11vnc
 ENV DISPLAY=:0 \
     SCR_WIDTH=1600 \
@@ -31,7 +31,7 @@ ENV DISPLAY=:0 \
 EXPOSE 5900
 
 
-# NOVNC
+## NOVNC
 ADD https://github.com/novnc/noVNC/archive/v${NO_VNC_VER}.zip /_install
 ADD https://github.com/novnc/websockify/archive/v${WEB_SOCK_VER}.zip /_install
 RUN cd /_install && \
@@ -44,7 +44,11 @@ RUN cd /_install && \
 EXPOSE 8080
 
 
-# All Dependencies Satisfied
+## Other Applications
+RUN apt install -y konsole
+
+
+## All Dependencies Satisfied
 COPY root /
 WORKDIR /root
 VOLUME /root
