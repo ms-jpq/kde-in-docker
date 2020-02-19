@@ -31,6 +31,7 @@ RUN apt install -y xvfb x11vnc
 ENV DISPLAY=:0 \
     SCR_WIDTH=1600 \
     SCR_HEIGHT=900 \
+    VNC_RESIZE=scale \
     RECON_DELAY=250
 EXPOSE 5900
 
