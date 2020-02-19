@@ -30,9 +30,7 @@ run apt install -y nautilus
 RUN apt install -y xvfb x11vnc
 ENV DISPLAY=:0 \
     SCR_WIDTH=1600 \
-    SCR_HEIGHT=900 \
-    VNC_RESIZE=scale \
-    RECON_DELAY=250
+    SCR_HEIGHT=900
 EXPOSE 5900
 
 
@@ -48,6 +46,8 @@ RUN cd /_install && \
 EXPOSE 8080
 EXPOSE 8888
 ENV PATH_PREFIX=/ \
+    VNC_RESIZE=scale \
+    RECON_DELAY=250 \
     PAGE_TITLE=KDE
 
 
