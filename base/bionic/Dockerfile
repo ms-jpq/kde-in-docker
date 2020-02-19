@@ -17,6 +17,9 @@ ENTRYPOINT ["/init"]
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
     apt install -y plasma-desktop
+# https://github.com/mviereck/x11docker/issues/183
+RUN apt remove -y bluedevil && \
+    sed -i 's/.*kdeinit/###&/' /usr/bin/startkde
 
 
 ## NAUTILUS
@@ -57,6 +60,3 @@ VOLUME /root
 
 
 RUN rm -r /_install
-# https://github.com/jriddell/kdeneon-docker/issues/1
-# Faulty bluetooth thingy
-RUN rm /usr/share/dbus-1/services/org.bluez.obex.service
