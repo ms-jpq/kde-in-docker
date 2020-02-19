@@ -12,6 +12,7 @@ VOLUME /root/Downloads
 
 # All Dependencies Satisfied
 COPY root /
+ENV PAGE_TITLE=Firefox
 
 
 # Cleanup

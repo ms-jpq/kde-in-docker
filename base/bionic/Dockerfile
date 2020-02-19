@@ -42,7 +42,8 @@ RUN cd /_install && \
     mv websockify-${WEB_SOCK_VER} /novnc/utils/websockify
 EXPOSE 8080
 EXPOSE 8888
-ENV PATH_PREFIX=/
+ENV PATH_PREFIX=/ \
+    PAGE_TITLE=KDE
 
 
 ## Other Applications
