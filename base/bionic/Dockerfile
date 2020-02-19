@@ -15,7 +15,7 @@ ENTRYPOINT ["/init"]
 ## KDE
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
-    apt install -y software-properties-common && \
+    apt install -y apt-utils software-properties-common && \
     add-apt-repository ppa:kubuntu-ppa/backports && \
     apt update && \
     apt install -y plasma-desktop
