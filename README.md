@@ -1,4 +1,4 @@
-# [Docker GUI KDE](https://ms-jpq.github.io/docker-gui-kde/)
+# [KID - KDE in Docker](https://ms-jpq.github.io/kde-in-docker/)
 
 Docker + VNC + noVNC web UI
 
@@ -42,7 +42,7 @@ Relatively lightweight images of containerized apps.
 
 KDE on 18.04 lts. `620MB`
 
-![bionic preview.png](https://github.com/ms-jpq/docker-gui-kde/raw/master/preview/bionic.png)
+![bionic preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/bionic.png)
 
 ### [Firefox](https://hub.docker.com/r/msjpq/firefox-vnc/)
 
@@ -50,7 +50,7 @@ KDE on 18.04 lts. `620MB`
 
 🦊
 
-![firefox preview.png](https://github.com/ms-jpq/docker-gui-kde/raw/master/preview/firefox.png)
+![firefox preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/firefox.png)
 
 ### [Motrix](https://hub.docker.com/r/msjpq/motrix-vnc/)
 
@@ -60,4 +60,4 @@ Really cool download client. [https://motrix.app/](https://motrix.app/)
 
 **`thunder://`** !! 迅雷
 
-![motrix preview.png](https://github.com/ms-jpq/docker-gui-kde/raw/master/preview/motrix.png)
+![motrix preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/motrix.png)
