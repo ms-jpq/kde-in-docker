@@ -32,7 +32,7 @@ Relatively lightweight images of containerized apps.
 
 ### Common Volumes
 
-`-v ./appconfig:/root`
+- `-v ./appconfig:/root`
 
 ## Images
 
