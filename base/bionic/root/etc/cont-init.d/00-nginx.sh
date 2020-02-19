@@ -1,4 +1,12 @@
 #!/usr/bin/with-contenv sh
 
-TEMP="$(envsubst '${PATH_PREFIX}' < /etc/nginx/nginx.conf)"
+
+if [ "$PATH_PREFIX" = "/" ]
+then
+  export SOCKET_PREFIX=""
+else
+  export SOCKET_PREFIX="$PATH_PREFIX"
+fi
+
+TEMP="$(envsubst '${PATH_PREFIX},${SOCKET_PREFIX}' < /etc/nginx/nginx.conf)"
 echo "$TEMP" > /etc/nginx/nginx.conf
