@@ -1,26 +1,27 @@
 FROM msjpq/kde-vnc:bionic
 
-# Install Deepin Deps
-# https://github.com/zq1997/deepin-wine
-RUN apt install -y curl && \
-    curl https://deepin-wine.i-m.dev/setup.sh | sh
+# # Install Deepin Deps
+# # https://github.com/zq1997/deepin-wine
+# RUN apt install -y curl && \
+#     curl https://deepin-wine.i-m.dev/setup.sh | sh
 
 
 # Pull Deps
-RUN mkdir /tmp/install && \
-    cd /tmp/install && \
+RUN mkdir /_install && \
+    cd /_install && \
+    apt install -y git && \
     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-ubuntu.git && \
     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-containers-for-ubuntu.git
 
 # Install Deps
-RUN cd /tmp/install/deepin-wine-ubuntu && \
+RUN cd /_install/deepin-wine-ubuntu && \
     dpkg --add-architecture i386 && \
     apt update && \
     dpkg -i *.deb || \
     apt install -f -y
 
 # Install Apps
-RUN cd /tmp/install/deepin-wine-containers-for-ubuntu && \
+RUN cd /_install/deepin-wine-containers-for-ubuntu && \
     dpkg -i *.deb || \
     apt install -f -y
 RUN rm /var/lib/dpkg/statoverride && \
