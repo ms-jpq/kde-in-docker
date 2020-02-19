@@ -30,7 +30,8 @@ run apt install -y nautilus
 RUN apt install -y xvfb x11vnc
 ENV DISPLAY=:0 \
     SCR_WIDTH=1600 \
-    SCR_HEIGHT=900
+    SCR_HEIGHT=900 \
+    RECON_DELAY=250
 EXPOSE 5900
 
 
