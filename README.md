@@ -6,36 +6,6 @@ Docker + VNC + noVNC web UI
 
 **So you can run KDE inside a browser**
 
-## Usage
-
-### Common Environmental Variables
-
-#### VNC
-
-- `-e SCR_WIDTH=1600`
-- `-e SCR_HEIGHT=900`
-
-#### noVNC UI
-
-- `-e PATH_PREFIX=/`
-- `-e VNC_RESIZE=scale|off`
-- `-e RECON_DELAY=250` reconnection delay (ms)
-- `-e PAGE_TITLE=🐳`
-
-#### Misc
-
-- `-e ROOT_PASSWORD=password`
-
-### Common Ports
-
-- `-p 80:8080` noVNC web UI
-
-- `-p 5900:5900` VNC
-
-### Common Volumes
-
-- `-v ./appconfig:/root`
-
 ## Images
 
 ---
@@ -75,3 +45,33 @@ Really cool download client. [https://motrix.app/](https://motrix.app/)
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc`
 
 ![motrix preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/motrix.png)
+
+## Usage
+
+### Common Environmental Variables
+
+#### VNC
+
+- `-e SCR_WIDTH=1600`
+- `-e SCR_HEIGHT=900`
+
+#### noVNC UI
+
+- `-e PATH_PREFIX=/`
+- `-e VNC_RESIZE=scale|off`
+- `-e RECON_DELAY=250` reconnection delay (ms)
+- `-e PAGE_TITLE=🐳`
+
+#### Misc
+
+- `-e ROOT_PASSWORD=password`
+
+### Common Ports
+
+- `-p 80:8080` noVNC web UI
+
+- `-p 5900:5900` VNC
+
+### Common Volumes
+
+- `-v ./appconfig:/root`
