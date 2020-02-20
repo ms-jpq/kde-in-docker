@@ -8,18 +8,6 @@ Docker + VNC + noVNC web UI
 
 ## Images
 
-### [Base:Ubuntu-Bionic](https://hub.docker.com/r/msjpq/kde-vnc/)
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg)](https://hub.docker.com/r/msjpq/kde-vnc/)
-
-KDE on 18.04 lts. `620MB`
-
-**RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:bionic`
-
-![bionic preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/bionic.png)
-
----
-
 ### [Firefox](https://hub.docker.com/r/msjpq/firefox-vnc/)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/firefox-vnc.svg)](https://hub.docker.com/r/msjpq/firefox-vnc/)
@@ -43,6 +31,18 @@ Really cool download client. [https://motrix.app/](https://motrix.app/)
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc`
 
 ![motrix preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/motrix.png)
+
+---
+
+### [Base:Ubuntu-Bionic](https://hub.docker.com/r/msjpq/kde-vnc/)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg)](https://hub.docker.com/r/msjpq/kde-vnc/)
+
+KDE on 18.04 lts. `620MB`
+
+**RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:bionic`
+
+![bionic preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/bionic.png)
 
 ---
 
