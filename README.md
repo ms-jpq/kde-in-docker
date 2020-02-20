@@ -8,8 +8,6 @@ Docker + VNC + noVNC web UI
 
 ## Images
 
----
-
 ### [Base:Ubuntu-Bionic](https://hub.docker.com/r/msjpq/kde-vnc/)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg)](https://hub.docker.com/r/msjpq/kde-vnc/)
@@ -45,6 +43,8 @@ Really cool download client. [https://motrix.app/](https://motrix.app/)
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc`
 
 ![motrix preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/motrix.png)
+
+---
 
 ## Usage
 
