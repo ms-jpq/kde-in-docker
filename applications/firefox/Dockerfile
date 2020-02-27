@@ -6,7 +6,8 @@ RUN mkdir /_install
 
 
 # Install
-RUN apt install -y firefox
+RUN apt update && \
+    apt install -y firefox
 VOLUME /root/Downloads
 
 
@@ -16,4 +17,5 @@ ENV PAGE_TITLE=Firefox
 
 
 # Cleanup
-RUN rm -r /_install
+RUN apt clean && \
+    rm -r /_install

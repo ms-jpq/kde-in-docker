@@ -67,4 +67,5 @@ VOLUME /root
 
 
 # Cleanup
-RUN rm -r /_install
+RUN apt clean && \
+    rm -r /_install
