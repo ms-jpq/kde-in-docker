@@ -86,4 +86,3 @@ KDE on 20.04 lts. `730MB`
 
 ![focal preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/focal.png)
 
----

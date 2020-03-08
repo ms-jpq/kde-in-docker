@@ -1,5 +1,8 @@
 FROM msjpq/kde-vnc:bionic
 
+ARG MONO_VER="4.9.4"
+ARG GECKO_VER="2.47.1"
+
 RUN mkdir /_install
 
 
@@ -15,14 +18,19 @@ RUN dpkg --add-architecture i386 && \
 # WINE HQ
 RUN apt install -y winehq-devel
 
+
 # Mono
-RUN echo Mono
+ADD https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}.msi /_install
+RUN echo mono
+
 
 # Gecko
+ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86.msi /_install
+ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86_64.msi /_install
 RUN echo gecko
 
 
-# Cleanup
-RUN apt autoremove -y && \
-    apt clean && \
-    rm -r /_install
+# # Cleanup
+# RUN apt autoremove -y && \
+#     apt clean && \
+#     rm -r /_install
