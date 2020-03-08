@@ -54,16 +54,16 @@ ENV PATH_PREFIX=/ \
 RUN apt install -y konsole
 
 
-## All Dependencies Satisfied
-COPY _root /
-COPY bionic/root /
-
-
 ## Setup Root User
 ENV ROOT_PASSWORD=password
 RUN echo "root:$ROOT_PASSWORD" | chpasswd
 WORKDIR /root
 VOLUME /root
+
+
+## All Dependencies Satisfied
+COPY _root /
+COPY bionic/root /
 
 
 # Cleanup
