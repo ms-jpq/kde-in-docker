@@ -17,20 +17,26 @@ RUN dpkg --add-architecture i386 && \
 
 # WINE HQ
 RUN apt install -y winehq-devel
+RUN mkdir /usr/share/wine
 
 
 # Mono
-ADD https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}.msi /_install
-RUN echo mono
+RUN mkdir /usr/share/wine/mono
+ADD https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}.msi /usr/share/wine/mono
 
 
 # Gecko
-ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86.msi /_install
-ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86_64.msi /_install
-RUN echo gecko
+RUN mkdir /usr/share/wine/gecko
+ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86.msi /usr/share/wine/gecko
+ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86_64.msi /usr/share/wine/gecko
 
 
-# # Cleanup
-# RUN apt autoremove -y && \
-#     apt clean && \
-#     rm -r /_install
+# Wine Tricks
+ADD https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks /usr/bin
+RUN chmod +x /usr/bin/winetricks
+
+
+# Cleanup
+RUN apt autoremove -y && \
+    apt clean && \
+    rm -r /_install
