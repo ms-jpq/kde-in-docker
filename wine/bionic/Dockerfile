@@ -17,16 +17,11 @@ RUN dpkg --add-architecture i386 && \
 
 # WINE HQ
 RUN apt install -y winehq-devel
-RUN mkdir /usr/share/wine
 
 
-# Mono
-RUN mkdir /usr/share/wine/mono
+# WINE Libs
+RUN mkdir /usr/share/wine /usr/share/wine/mono /usr/share/wine/gecko
 ADD https://dl.winehq.org/wine/wine-mono/${MONO_VER}/wine-mono-${MONO_VER}.msi /usr/share/wine/mono
-
-
-# Gecko
-RUN mkdir /usr/share/wine/gecko
 ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86.msi /usr/share/wine/gecko
 ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x86_64.msi /usr/share/wine/gecko
 
