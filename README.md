@@ -6,6 +6,36 @@ Docker + VNC + noVNC web UI
 
 **So you can run KDE inside a browser**
 
+## Usage
+
+### Common Environmental Variables
+
+#### VNC
+
+- `-e SCR_WIDTH=1600`
+- `-e SCR_HEIGHT=900`
+
+#### noVNC UI
+
+- `-e PATH_PREFIX=/`
+- `-e VNC_RESIZE=scale|remote|off` remote = rescale remote desktop, scale = stretch remote desktop
+- `-e RECON_DELAY=250` reconnection delay (ms)
+- `-e PAGE_TITLE=🐳`
+
+#### Misc
+
+- `-e ROOT_PASSWORD=password`
+
+### Common Ports
+
+- `-p 80:8080` noVNC web UI
+
+- `-p 5900:5900` VNC
+
+### Common Volumes
+
+- `-v ./appconfig:/root`
+
 ## Images
 
 ### [Firefox](https://hub.docker.com/r/msjpq/firefox-vnc/)
@@ -57,33 +87,3 @@ KDE on 20.04 lts. `730MB`
 ![focal preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/focal.png)
 
 ---
-
-## Usage
-
-### Common Environmental Variables
-
-#### VNC
-
-- `-e SCR_WIDTH=1600`
-- `-e SCR_HEIGHT=900`
-
-#### noVNC UI
-
-- `-e PATH_PREFIX=/`
-- `-e VNC_RESIZE=scale|remote|off` remote = rescale remote desktop, scale = stretch remote desktop
-- `-e RECON_DELAY=250` reconnection delay (ms)
-- `-e PAGE_TITLE=🐳`
-
-#### Misc
-
-- `-e ROOT_PASSWORD=password`
-
-### Common Ports
-
-- `-p 80:8080` noVNC web UI
-
-- `-p 5900:5900` VNC
-
-### Common Volumes
-
-- `-v ./appconfig:/root`
