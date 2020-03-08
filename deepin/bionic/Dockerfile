@@ -1,32 +1,42 @@
-FROM msjpq/kde-vnc:bionic
-
-RUN mkdir /_install
-
-
+FROM alpine AS base
 # Pull Deps
-RUN cd /_install && \
-    apt install -y git && \
+RUN mkdir /_install && \
+    cd /_install && \
+    apk add git && \
     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-ubuntu.git && \
     git clone --depth=1 https://github.com/wszqkzqk/deepin-wine-containers-for-ubuntu.git
+
+
+
+FROM msjpq/wine-vnc:bionic
+
+# Pull Deps
+COPY --from=base /_install /_install
 
 
 # Install Deps
 RUN cd /_install/deepin-wine-ubuntu && \
     dpkg --add-architecture i386 && \
     apt update && \
-    apt install -y '.*\.deb'
+    dpkg -i *.deb || \
+    apt install -fy
 
 
 # Install Apps
 RUN cd /_install/deepin-wine-containers-for-ubuntu && \
-    apt install -y '.*\.deb'
+    dpkg -i *.deb || \
+    apt install -fy
 
 
-# # Fix Lang
-# RUN sed -i 's/WINE_CMD="deepin-wine"/WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"/' /opt/deepinwine/tools/run.sh
+# Set up Lang
+RUN apt install -y locales && \
+    locale-gen zh_CN.UTF-8
+ENV LC_ALL=zh_CN.UTF-8 \
+    LANG=zh_CN.UTF-8 \
+    PAGE_TITLE=深度
 
 
-ENV PAGE_TITLE=Deepin
-
-
-# RUN rm -r /_install
+# Cleanup
+RUN apt autoremove -y && \
+    apt clean && \
+    rm -r /_install
