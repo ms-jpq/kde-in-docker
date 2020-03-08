@@ -50,7 +50,7 @@ KDE on 18.04 lts. `620MB`
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/kde-vnc.svg)](https://hub.docker.com/r/msjpq/kde-vnc/)
 
-KDE on 18.04 lts. `730MB`
+KDE on 20.04 lts. `730MB`
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:focal`
 
