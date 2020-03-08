@@ -3,11 +3,11 @@
 [Desktop Entry]
 Comment=
 Encoding=UTF-8
-Exec=/usr/bin/wine "C:\\Program Files\Internet Explorer\iexplorer.exe"
+Exec=/usr/bin/winetricks
 GenericName=
-Icon=applications-internet
+Icon=face-smile
 MimeType=
-Name=Internet Explorer
+Name=Wine Tricks
 Path=
 StartupNotify=true
 Terminal=false

@@ -29,8 +29,10 @@ RUN cd /_install/deepin-wine-containers-for-ubuntu && \
 
 
 # Set up Lang
-RUN apt install -y locales && \
-    locale-gen zh_CN.UTF-8
+RUN apt install -y locales kde-l10n-zhcn && \
+    locale-gen zh_CN.UTF-8 && \
+    echo 'LC_ALL=zh_CN.UTF-8' > /etc/default/locale && \
+    echo 'LANG=zh_CN.UTF-8' >> /etc/default/locale
 ENV LC_ALL=zh_CN.UTF-8 \
     LANG=zh_CN.UTF-8 \
     PAGE_TITLE=深度
