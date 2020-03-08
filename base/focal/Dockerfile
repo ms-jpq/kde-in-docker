@@ -43,7 +43,6 @@ RUN cd /_install && \
     mv websockify-${WEB_SOCK_VER} /novnc/utils/websockify && \
     ln -s /usr/bin/python2 /usr/bin/python
 EXPOSE 8080
-EXPOSE 8888
 ENV PATH_PREFIX=/ \
     VNC_RESIZE=scale \
     RECON_DELAY=250 \

@@ -43,7 +43,6 @@ RUN cd /_install && \
     mv noVNC-${NO_VNC_VER} /novnc && \
     mv websockify-${WEB_SOCK_VER} /novnc/utils/websockify
 EXPOSE 8080
-EXPOSE 8888
 ENV PATH_PREFIX=/ \
     VNC_RESIZE=scale \
     RECON_DELAY=250 \
