@@ -44,7 +44,7 @@ KDE on 18.04 lts. `620MB`
 
 ![bionic preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/bionic.png)
 
---
+---
 
 ### [Base:Ubuntu-Focal](https://hub.docker.com/r/msjpq/kde-vnc/)
 
