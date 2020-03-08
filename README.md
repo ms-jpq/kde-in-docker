@@ -86,3 +86,14 @@ KDE on 20.04 lts. `730MB`
 
 ![focal preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/focal.png)
 
+---
+
+### [Base:Wine-Bionic](https://hub.docker.com/r/msjpq/wine-vnc/)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/wine-vnc.svg)](https://hub.docker.com/r/msjpq/wine-vnc/)
+
+KDE on 18.04 lts. `620MB`
+
+**RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/wine-vnc:bionic`
+
+![wine preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/wine.png)
