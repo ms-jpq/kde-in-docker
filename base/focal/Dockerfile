@@ -17,7 +17,6 @@ ENTRYPOINT ["/init"]
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
     apt install -y plasma-desktop
-# https://github.com/mviereck/x11docker/issues/183
 RUN apt install -y dbus-x11
 
 
