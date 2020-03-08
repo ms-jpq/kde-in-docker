@@ -10,6 +10,6 @@ focal:
 
 push:
 	@$(BASE) bionic push
-	# @$(BASE) focal push
+	@$(BASE) focal push
 	@$(FIREFOX) push
 	@$(MOTRIX) push
