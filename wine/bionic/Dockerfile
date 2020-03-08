@@ -28,8 +28,12 @@ ADD https://dl.winehq.org/wine/wine-gecko/${GECKO_VER}/wine-gecko-${GECKO_VER}-x
 
 # Wine Tricks
 ADD https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks /usr/bin
-RUN apt install -y wget && \
+RUN apt install -y wget zenity && \
     chmod +x /usr/bin/winetricks
+
+
+## All Dependencies Satisfied
+COPY _root /
 
 
 # Cleanup
