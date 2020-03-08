@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
+set -eu
+set -o pipefail
 
 if [ "$PATH_PREFIX" = "/" ]
 then

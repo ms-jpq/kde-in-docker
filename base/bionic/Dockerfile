@@ -26,7 +26,7 @@ run apt install -y nautilus
 
 
 ## VNC
-RUN apt install -y xvfb x11vnc
+RUN apt install -y tigervnc-standalone-server tigervnc-xorg-extension
 ENV DISPLAY=:0 \
     SCR_WIDTH=1600 \
     SCR_HEIGHT=900

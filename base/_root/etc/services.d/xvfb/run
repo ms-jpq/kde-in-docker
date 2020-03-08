@@ -1,3 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-/usr/bin/Xvfb "$DISPLAY" -screen 0 "$SCR_WIDTH"x"$SCR_HEIGHT"x16

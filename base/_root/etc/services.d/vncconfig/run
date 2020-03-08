@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-/usr/bin/startkde
+vncconfig -nowin

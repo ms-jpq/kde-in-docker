@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+set -eu
+set -o pipefail
 
 mkdir -p /root/Desktop
 cat /usr/share/applications/nautilus.desktop > /root/Desktop/nautilus.desktop
