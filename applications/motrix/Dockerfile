@@ -7,8 +7,7 @@ RUN mkdir /_install
 
 # Install
 ADD https://github.com/agalwood/Motrix/releases/download/v${VERSION}/Motrix_${VERSION}_amd64.deb /_install
-RUN dpkg -i /_install/Motrix_${VERSION}_amd64.deb || \
-    apt install -fy
+RUN apt install -y /_install/Motrix_${VERSION}_amd64.deb
 VOLUME /root/Downloads
 
 

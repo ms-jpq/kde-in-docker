@@ -34,6 +34,7 @@ RUN apt install -y wget zenity && \
 
 ## All Dependencies Satisfied
 COPY _root /
+ENV PAGE_TITLE=Wine
 
 
 # Cleanup
