@@ -21,8 +21,8 @@ RUN apt remove -y bluedevil && \
     sed -i 's/.*kdeinit/###&/' /usr/bin/startkde
 
 
-## NAUTILUS
-run apt install -y nautilus
+## Other Applications
+run apt install -y nautilus konsole
 
 
 ## VNC
@@ -50,10 +50,6 @@ ENV PATH_PREFIX=/ \
     PAGE_TITLE=KDE
 
 
-## Other Applications
-RUN apt install -y konsole
-
-
 ## Setup Root User
 ENV ROOT_PASSWORD=password
 RUN echo "root:$ROOT_PASSWORD" | chpasswd
@@ -67,5 +63,6 @@ COPY bionic/root /
 
 
 # Cleanup
-RUN apt clean && \
+RUN apt autoremove -y && \
+    apt clean && \
     rm -r /_install
