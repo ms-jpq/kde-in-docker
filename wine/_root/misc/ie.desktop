@@ -3,7 +3,7 @@
 [Desktop Entry]
 Comment=
 Encoding=UTF-8
-Exec=/usr/bin/wine "C:\\Program Files\Internet Explorer\iexplore.exe"
+Exec=/usr/bin/wine "C:\\\\Program Files\\Internet Explorer\\iexplore.exe"
 GenericName=
 Icon=applications-internet
 MimeType=
