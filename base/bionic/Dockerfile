@@ -8,8 +8,8 @@ RUN mkdir /_install
 
 ## S6 Overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_VER}/s6-overlay-amd64.tar.gz /_install
-RUN gunzip -c /_install/s6-overlay-amd64.tar.gz | tar -xf - -C / && \
-    mkdir -p /app /notebooks
+RUN tar xzf /_install/s6-overlay-amd64.tar.gz -C / --exclude="./bin" && \
+    tar xzf /_install/s6-overlay-amd64.tar.gz -C /usr ./bin
 ENTRYPOINT ["/init"]
 
 
