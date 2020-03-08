@@ -21,7 +21,7 @@ RUN apt install -y dbus-x11
 
 
 ## Other Applications
-run apt install -y dolphin konsole
+RUN apt install -y dolphin konsole
 
 
 ## VNC
