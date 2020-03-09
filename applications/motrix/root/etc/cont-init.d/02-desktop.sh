@@ -1,4 +1,6 @@
 #!/bin/bash
 
-mkdir -p /root/Desktop
+set -eu
+set -o pipefail
+
 cat /usr/share/applications/motrix.desktop > /root/Desktop/motrix.desktop
