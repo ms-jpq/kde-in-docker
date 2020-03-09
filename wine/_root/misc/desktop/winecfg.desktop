@@ -1,0 +1,20 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Comment=
+Encoding=UTF-8
+Exec=/usr/bin/wine winecfg.exe
+GenericName=
+Icon=preferences-desktop-default-applications
+MimeType=
+Name=Wine Settings
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-Created-By=WINE
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
