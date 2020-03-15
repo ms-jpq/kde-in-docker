@@ -50,6 +50,20 @@ Docker + VNC + noVNC web UI
 
 ---
 
+### [Adobe Acrobat](https://hub.docker.com/repository/docker/msjpq/adobe-acrobat-vnc/)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/adobe-acrobat-vnc.svg)](https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/)
+
+Adobe PDF Reader `9.5.5`
+
+(first launch slow)
+
+**RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/adobe-acrobat-vnc`
+
+![acrobat preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/acrobat.png)
+
+---
+
 ### [Motrix](https://hub.docker.com/r/msjpq/motrix-vnc/)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/motrix-vnc.svg)](https://hub.docker.com/r/msjpq/motrix-vnc/)
