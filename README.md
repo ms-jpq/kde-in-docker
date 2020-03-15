@@ -50,7 +50,7 @@ Docker + VNC + noVNC web UI
 
 ---
 
-### [Adobe Acrobat](https://hub.docker.com/repository/docker/msjpq/adobe-acrobat-vnc/)
+### [Adobe Acrobat](https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/adobe-acrobat-vnc.svg)](https://hub.docker.com/r/msjpq/adobe-acrobat-vnc/)
 
