@@ -17,4 +17,6 @@ ENV PAGE_TITLE=Motrix
 
 
 # Cleanup
-RUN rm -r /_install
+RUN apt autoremove -y && \
+    apt clean && \
+    rm -r /_install
