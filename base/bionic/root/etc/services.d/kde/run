@@ -3,4 +3,5 @@
 set -eu
 set -o pipefail
 
-/usr/bin/startkde
+export XDG_RUNTIME_DIR="/tmp/runtime-abc"
+s6-setuidgid abc /usr/bin/startkde

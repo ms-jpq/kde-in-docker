@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/usr/bin/with-contenv bash
 
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/org.kde.dolphin.desktop > /root/Desktop/dolphin.desktop
-cat /usr/share/applications/org.kde.konsole.desktop > /root/Desktop/konsole.desktop
+cat /usr/share/applications/org.kde.dolphin.desktop > "$HOME/Desktop/dolphin.desktop"
+cat /usr/share/applications/org.kde.konsole.desktop > "$HOME/Desktop/konsole.desktop"

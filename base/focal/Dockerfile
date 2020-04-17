@@ -46,14 +46,12 @@ EXPOSE 8080
 ENV PATH_PREFIX=/ \
     VNC_RESIZE=scale \
     RECON_DELAY=250 \
-    PAGE_TITLE=KDE
+    PAGE_TITLE=KDE \
+    HOME=/home/abc
 
 
-## Setup Root User
-ENV ROOT_PASSWORD=password
-RUN echo "root:$ROOT_PASSWORD" | chpasswd
-WORKDIR /root
-VOLUME /root
+WORKDIR /home/abc
+VOLUME /home/abc
 
 
 ## All Dependencies Satisfied

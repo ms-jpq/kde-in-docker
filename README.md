@@ -24,7 +24,9 @@ Docker + VNC + noVNC web UI
 
 #### Misc
 
-- `-e ROOT_PASSWORD=password`
+- `-e VNC_PASSWORD=password`
+- `-e PUID=1000` - The user uid which can be used to match a host's user.
+- `-e PGID=1000` - the user's main group id which can be used to match a host's group
 
 ### Common Ports
 
@@ -34,7 +36,7 @@ Docker + VNC + noVNC web UI
 
 ### Common Volumes
 
-- `-v ./appconfig:/root`
+- `-v ./appconfig:/home/abc`
 
 ## Images
 

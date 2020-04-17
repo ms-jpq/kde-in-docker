@@ -3,7 +3,7 @@ FROM msjpq/kde-vnc:bionic
 # Install
 RUN apt update && \
     apt install -y firefox
-VOLUME /root/Downloads
+VOLUME /home/abc/Downloads
 
 
 # All Dependencies Satisfied

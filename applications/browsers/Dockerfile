@@ -3,7 +3,7 @@ FROM msjpq/firefox-vnc
 # Install
 RUN apt update && \
     apt install -y chromium-browser
-VOLUME /root/Downloads
+VOLUME /home/abc/Downloads
 
 
 # All Dependencies Satisfied
