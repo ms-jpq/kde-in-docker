@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-vncconfig -nowin
+s6-setuidgid kid vncconfig -nowin

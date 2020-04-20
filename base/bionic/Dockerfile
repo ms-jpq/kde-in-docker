@@ -22,7 +22,7 @@ RUN apt remove -y bluedevil && \
 
 
 ## Other Applications
-run apt install -y nautilus konsole
+RUN apt install -y nautilus konsole
 
 
 ## VNC
@@ -49,11 +49,15 @@ ENV PATH_PREFIX=/ \
     PAGE_TITLE=KDE
 
 
-## Setup Root User
-ENV ROOT_PASSWORD=password
-RUN echo "root:$ROOT_PASSWORD" | chpasswd
-WORKDIR /root
-VOLUME /root
+## USER
+ENV PGID=0 \
+    PUID=0 \
+    ROOT_PASSWORD=password \
+    HOME=/config
+RUN useradd -U -u 6006 -d "$HOME" kid && \
+    usermod -G users kid
+WORKDIR /
+
 
 
 ## All Dependencies Satisfied

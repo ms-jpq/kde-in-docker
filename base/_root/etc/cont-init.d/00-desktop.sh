@@ -3,5 +3,5 @@
 set -eu
 set -o pipefail
 
-mkdir -p /misc/desktop /root/Desktop
-mv /misc/desktop/* /root/Desktop
+s6-setuidgid kid mkdir -p /misc/desktop $HOME/Desktop
+mv /misc/desktop/* $HOME/Desktop

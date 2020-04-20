@@ -10,6 +10,15 @@ Docker + VNC + noVNC web UI
 
 ### Common Environmental Variables
 
+#### Rootless
+
+These images by default runs as root.
+
+To change that, set these two variables to a non Zero value.
+
+- `-e PGID=0`
+- `-e PUID=0`
+
 #### VNC
 
 - `-e SCR_WIDTH=1600`
@@ -24,6 +33,8 @@ Docker + VNC + noVNC web UI
 
 #### Misc
 
+This is your password even under non-root user
+
 - `-e ROOT_PASSWORD=password`
 
 ### Common Ports
@@ -34,7 +45,11 @@ Docker + VNC + noVNC web UI
 
 ### Common Volumes
 
-- `-v ./appconfig:/root`
+- `-v ./appconfig:/config`
+
+### Special Thanks
+
+[McGriddle](https://github.com/McGriddle) for helping with rootless!
 
 ## Images
 

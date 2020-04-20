@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-/usr/bin/startkde
+s6-setuidgid kid /usr/bin/startkde
