@@ -13,7 +13,7 @@ echo "root:$ROOT_PASSWORD" | chpasswd
 # for compatibility reasons
 if [[ "$PGID" -eq 0 ]] && [[ "$PUID" -eq 0 ]]
 then
-  if [[ ! -d "$HOME" ]] && [[ ! -L "$HOME"  ]]
+  if [[ ! -e "$HOME" ]]
   then
     ln -s /root "$HOME"
   fi
