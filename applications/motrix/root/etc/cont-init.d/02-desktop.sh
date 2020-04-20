@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-s6-setuidgid kid cat /usr/share/applications/motrix.desktop > /config/Desktop/motrix.desktop
+cat /usr/share/applications/motrix.desktop > /config/Desktop/motrix.desktop
