@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-s6-setuidgid abc /usr/bin/startplasma-x11
+s6-setuidgid kid /usr/bin/startplasma-x11

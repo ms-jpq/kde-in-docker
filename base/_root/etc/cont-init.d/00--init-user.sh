@@ -3,5 +3,5 @@
 set -eu
 set -o pipefail
 
-groupmod -o -g $PGID abc
-usermod -o -u $PUID abc
+groupmod -o -g $PGID kid
+usermod -o -u $PUID kid
