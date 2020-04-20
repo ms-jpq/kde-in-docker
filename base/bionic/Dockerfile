@@ -59,7 +59,6 @@ RUN useradd -U -u 6006 -d "$HOME" kid && \
 WORKDIR /
 
 
-
 ## All Dependencies Satisfied
 COPY _root /
 COPY bionic/root /
