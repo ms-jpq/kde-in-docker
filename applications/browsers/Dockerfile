@@ -7,7 +7,9 @@ RUN apt update && \
 
 # All Dependencies Satisfied
 COPY root /
-ENV PAGE_TITLE=Browsers
+ENV PGID=6006 \
+    PUID=6006 \
+    PAGE_TITLE=Browsers
 
 
 # Cleanup
