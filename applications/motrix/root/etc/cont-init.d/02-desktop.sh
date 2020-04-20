@@ -1,6 +1,6 @@
-#!/usr/bin/with-contenv bash
+#!/bin/bash
 
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/motrix.desktop > "$HOME/Desktop/motrix.desktop"
+cat /usr/share/applications/motrix.desktop > /root/Desktop/motrix.desktop

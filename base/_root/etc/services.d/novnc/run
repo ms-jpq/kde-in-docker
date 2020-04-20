@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-s6-setuidgid abc /novnc/utils/launch.sh
+/novnc/utils/launch.sh
