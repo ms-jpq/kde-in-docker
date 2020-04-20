@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-s6-setuidgid abc /usr/bin/Xvnc "$DISPLAY" -geometry "$SCR_WIDTH"x"$SCR_HEIGHT" -depth 16 -PasswordFile=$HOME/.vnc/passwd
+s6-setuidgid abc /usr/bin/Xvnc "$DISPLAY" -geometry "$SCR_WIDTH"x"$SCR_HEIGHT" -depth 16 -SecurityTypes none -AlwaysShared
