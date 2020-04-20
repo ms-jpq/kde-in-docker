@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/chromium-browser.desktop > $HOME/Desktop/chromium.desktop
+cat /usr/share/applications/chromium-browser.desktop > "$HOME/Desktop/chromium.desktop"
