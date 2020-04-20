@@ -6,6 +6,7 @@ set -o pipefail
 groupmod -o -g "$PGID" kid
 usermod -o -u "$PUID" kid
 echo "kid:$ROOT_PASSWORD" | chpasswd
+echo "root:$ROOT_PASSWORD" | chpasswd
 
 
 # Link /root -> $HOME
