@@ -51,7 +51,8 @@ ENV PATH_PREFIX=/ \
 
 ## USER
 ENV PGID=0 \
-    PUID=0
+    PUID=0 \
+    ROOT_PASSWORD=password
 WORKDIR /
 VOLUME /config
 
