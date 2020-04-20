@@ -56,8 +56,7 @@ ENV PGID=0 \
 RUN useradd -U -u 6006 -d /config kid && \
     usermod -G users kid && \
     echo "kid:$ROOT_PASSWORD" | chpasswd
-WORKDIR /config
-VOLUME /config
+WORKDIR /
 
 
 ## All Dependencies Satisfied

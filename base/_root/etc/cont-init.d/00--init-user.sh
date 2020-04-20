@@ -6,9 +6,13 @@ set -o pipefail
 groupmod -o -g $PGID kid
 usermod -o -u $PUID kid
 
+# Link /root -> /config
+# for compatibility reasons
 if [[ $PGID -eq 0 ]] && [[ $PUID -eq 0 ]]
 then
-  s6-setuidgid kid ln -s /root /config
+  ln -s /root /config
 else
-  s6-setuidgid kid mkdir -p /config
+  mkdir -p /config
 fi
+
+chown kid:kid /config
