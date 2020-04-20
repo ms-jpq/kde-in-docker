@@ -55,8 +55,7 @@ ENV PGID=0 \
     ROOT_PASSWORD=password \
     HOME=/config
 RUN useradd -U -u 6006 -d "$HOME" kid && \
-    usermod -G users kid && \
-    echo "kid:$ROOT_PASSWORD" | chpasswd
+    usermod -G users kid
 WORKDIR /
 
 
