@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/firefox.desktop > /config/Desktop/firefox.desktop
+s6-setuidgid kid cat /usr/share/applications/firefox.desktop > /config/Desktop/firefox.desktop

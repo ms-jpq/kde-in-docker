@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/AdobeReader.desktop > /config/Desktop/AdobeReader.desktop
+s6-setuidgid kid cat /usr/share/applications/AdobeReader.desktop > /config/Desktop/AdobeReader.desktop

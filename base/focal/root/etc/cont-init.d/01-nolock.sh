@@ -3,5 +3,5 @@
 set -eu
 set -o pipefail
 
-mkdir -p /config/.config
-mv /misc/kscreenlockerrc config/.config/kscreenlockerrc
+s6-setuidgid kid mkdir -p /config/.config
+s6-setuidgid kid mv /misc/kscreenlockerrc config/.config/kscreenlockerrc
