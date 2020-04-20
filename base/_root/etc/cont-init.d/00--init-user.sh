@@ -8,7 +8,7 @@ usermod -o -u $PUID kid
 
 if [[ $PGID -eq 0 ]] && [[ $PUID -eq 0 ]]
 then
-  test -L /config || test -d /config || ln -s /config /root
+  s6-setuidgid kid ln -s /root /config
 else
-  mkdir -p /config
+  s6-setuidgid kid mkdir -p /config
 fi
