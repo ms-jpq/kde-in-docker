@@ -22,7 +22,7 @@ RUN apt remove -y bluedevil && \
 
 
 ## Other Applications
-run apt install -y nautilus konsole
+RUN apt install -y nautilus konsole
 
 
 ## VNC
@@ -46,12 +46,12 @@ EXPOSE 8080
 ENV PATH_PREFIX=/ \
     VNC_RESIZE=scale \
     RECON_DELAY=250 \
-    PAGE_TITLE=KDE \
-    HOME=/home/abc
+    PAGE_TITLE=KDE
 
 
-WORKDIR /home/abc
-VOLUME /home/abc
+## USER
+ENV PGID=0 \
+    PUID=0
 
 
 ## All Dependencies Satisfied
