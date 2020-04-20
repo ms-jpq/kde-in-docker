@@ -1,7 +1,6 @@
-#!/usr/bin/with-contenv bash
+#!/bin/bash
 
 set -eu
 set -o pipefail
 
-export XDG_RUNTIME_DIR="/tmp/runtime-abc"
 s6-setuidgid abc /usr/bin/startkde

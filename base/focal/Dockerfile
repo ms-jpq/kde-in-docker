@@ -53,7 +53,10 @@ ENV PATH_PREFIX=/ \
 ENV PGID=0 \
     PUID=0 \
     ROOT_PASSWORD=password
-WORKDIR /
+RUN useradd -U -u $PUID -d /config abc && \
+    usermod -G users abc && \
+    echo "abc:$ROOT_PASSWORD" | chpasswd
+WORKDIR /config
 VOLUME /config
 
 

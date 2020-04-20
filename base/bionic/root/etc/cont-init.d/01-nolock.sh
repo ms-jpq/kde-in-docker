@@ -1,7 +1,7 @@
-#!/usr/bin/with-contenv bash
+#!/bin/bash
 
 set -eu
 set -o pipefail
 
-mkdir -p "$HOME/.config"
-mv /misc/kscreenlockerrc "$HOME/.config/kscreenlockerrc"
+mkdir -p /config/.config
+mv /misc/kscreenlockerrc /config/.config/kscreenlockerrc

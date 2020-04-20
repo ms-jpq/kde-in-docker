@@ -3,5 +3,4 @@
 set -eu
 set -o pipefail
 
-export XDG_RUNTIME_DIR="/tmp/runtime-abc"
 s6-setuidgid abc /usr/bin/startplasma-x11

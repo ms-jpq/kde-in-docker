@@ -1,7 +1,7 @@
-#!/usr/bin/with-contenv bash
+#!/bin/bash
 
 set -eu
 set -o pipefail
 
-mkdir -p /misc/desktop "$HOME/Desktop"
-mv /misc/desktop/* "$HOME/Desktop"
+mkdir -p /misc/desktop /config/Desktop
+mv /misc/desktop/* /config/Desktop
