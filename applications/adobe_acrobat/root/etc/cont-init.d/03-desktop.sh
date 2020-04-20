@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/AdobeReader.desktop > /config/Desktop/AdobeReader.desktop
+cat /usr/share/applications/AdobeReader.desktop > $HOME/Desktop/AdobeReader.desktop

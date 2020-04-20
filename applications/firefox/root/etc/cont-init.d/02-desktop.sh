@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/firefox.desktop > /config/Desktop/firefox.desktop
+cat /usr/share/applications/firefox.desktop > $HOME/Desktop/firefox.desktop

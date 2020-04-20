@@ -52,8 +52,9 @@ ENV PATH_PREFIX=/ \
 ## USER
 ENV PGID=0 \
     PUID=0 \
-    ROOT_PASSWORD=password
-RUN useradd -U -u 6006 -d /config kid && \
+    ROOT_PASSWORD=password \
+    HOME=/config
+RUN useradd -U -u 6006 -d "$HOME" kid && \
     usermod -G users kid && \
     echo "kid:$ROOT_PASSWORD" | chpasswd
 WORKDIR /

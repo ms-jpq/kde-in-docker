@@ -3,4 +3,4 @@
 set -eu
 set -o pipefail
 
-cat /usr/share/applications/motrix.desktop > /config/Desktop/motrix.desktop
+cat /usr/share/applications/motrix.desktop > $HOME/Desktop/motrix.desktop

@@ -3,5 +3,4 @@
 set -eu
 set -o pipefail
 
-export HOME=/config
 s6-setuidgid kid /usr/bin/startkde

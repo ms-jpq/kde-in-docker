@@ -6,13 +6,13 @@ set -o pipefail
 groupmod -o -g $PGID kid
 usermod -o -u $PUID kid
 
-# Link /root -> /config
+# Link /root -> $HOME
 # for compatibility reasons
 if [[ $PGID -eq 0 ]] && [[ $PUID -eq 0 ]]
 then
-  ln -s /root /config
+  ln -s /root $HOME
 else
-  mkdir -p /config
+  mkdir -p $HOME
 fi
 
-chown kid:kid /config
+chown kid:kid $HOME
