@@ -45,10 +45,6 @@ This is your password even under non-root user
 
 ### Common Volumes
 
-- `-v ./appconfig:/root`
-
-or if you are running rootless
-
 - `-v ./appconfig:/config`
 
 ### Special Thanks
