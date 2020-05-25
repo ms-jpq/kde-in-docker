@@ -7,10 +7,27 @@ on:
   pull_request:
     branches:
       - master
+  schedule:
+    - cron: "0 0 * * 0" # weekly
 
 jobs:
-  build:
+  base_image:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        codename:
+          - bionic
+          - focal
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Build
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: ${{ secrets.DOCKER_USERNAME }}/kde-vnc
+          tags: ${{ matrix.codename }}
+          path: base
+          Dockerfile: base/${{ matrix.codename }}/Dockerfile
