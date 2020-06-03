@@ -3,4 +3,7 @@
 set -eu
 set -o pipefail
 
+s6-svwait /var/run/s6/services/tigervnc
+
+
 s6-setuidgid kid /usr/bin/startkde

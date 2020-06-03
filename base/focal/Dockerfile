@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-ARG S6_VER="1.22.1.0"
+ARG S6_VER="2.0.0.1"
 ARG NO_VNC_VER="1.1.0"
 ARG WEB_SOCK_VER="0.9.0"
 
