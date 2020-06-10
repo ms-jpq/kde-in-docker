@@ -1,26 +1,26 @@
 <!doctype html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${PAGE_TITLE}</title>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-    iframe {
-      width: 100vw;
-      height: 100vh;
-      border: none;
-    }
-  </style>
-</head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${PAGE_TITLE}</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+      }
+    </style>
+  </head>
 
-<body>
-  <iframe
-    src="vnc.html?path=${PAGE_PREFIX}websockify&resize=${VNC_RESIZE}&autoconnect=true&reconnect=true&reconnect_delay=${RECON_DELAY}">
-  </iframe>
-</body>
-
+  <body>
+    <iframe
+      src="vnc.html?path=${PAGE_PREFIX}websockify&resize=${VNC_RESIZE}&autoconnect=true&reconnect=true&reconnect_delay=${RECON_DELAY}">
+    </iframe>
+  </body>
 </html>
