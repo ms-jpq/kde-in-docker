@@ -77,4 +77,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: ${{ secrets.DOCKER_USERNAME }}/wine-vnc
           tags: ${{ matrix.codename }}
-          path: wine/${{ matrix.codename }}
+          path: wine
+          Dockerfile: wine/${{ matrix.codename }}/Dockerfile
