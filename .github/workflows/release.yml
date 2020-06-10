@@ -56,3 +56,25 @@ jobs:
           repository: ${{ secrets.DOCKER_USERNAME }}/${{ matrix.app }}-vnc
           tags: latest
           path: applications/${{ matrix.app }}
+
+  wine:
+    needs:
+      - base_image
+    strategy:
+      matrix:
+        codename:
+          - bionic
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: ${{ secrets.DOCKER_USERNAME }}/wine-vnc
+          tags: ${{ matrix.codename }}
+          path: wine/${{ matrix.codename }}
