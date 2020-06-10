@@ -60,6 +60,7 @@ WORKDIR /
 
 
 ## All Dependencies Satisfied
+RUN yes | unminimize
 COPY _root /
 COPY bionic/root /
 
@@ -68,3 +69,4 @@ COPY bionic/root /
 RUN apt autoremove -y && \
     apt clean && \
     rm -r /_install
+
