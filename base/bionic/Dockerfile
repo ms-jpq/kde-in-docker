@@ -9,7 +9,6 @@ RUN mkdir /_install
 ## S6 Overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_VER}/s6-overlay-amd64.tar.gz /_install
 RUN gunzip -c /_install/s6-overlay-amd64.tar.gz | tar -xf - -C /
-ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=1
 ENTRYPOINT ["/init"]
 
 
