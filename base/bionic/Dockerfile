@@ -60,7 +60,7 @@ WORKDIR /
 
 
 ## All Dependencies Satisfied
-RUN yes | unminimize
+# RUN yes | unminimize
 COPY _root /
 COPY bionic/root /
 
