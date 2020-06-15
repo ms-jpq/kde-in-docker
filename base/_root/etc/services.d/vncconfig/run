@@ -6,4 +6,5 @@ set -o pipefail
 s6-svwait /var/run/s6/services/tigervnc
 
 
-s6-setuidgid kid vncconfig -nowin
+exec s6-setuidgid kid vncconfig -nowin
+
