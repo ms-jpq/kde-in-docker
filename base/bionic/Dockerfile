@@ -15,6 +15,7 @@ ENTRYPOINT ["/init"]
 ## KDE
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
+    apt upgrade -y && \
     apt install -y plasma-desktop
 # https://github.com/mviereck/x11docker/issues/183
 RUN apt remove -y bluedevil && \
