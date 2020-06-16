@@ -43,8 +43,7 @@ RUN cd /_install && \
     unzip v${NO_VNC_VER}.zip && \
     unzip v${WEB_SOCK_VER}.zip && \
     mv noVNC-${NO_VNC_VER} /novnc && \
-    mv websockify-${WEB_SOCK_VER} /novnc/utils/websockify && \
-    ln -s /usr/bin/python2 /usr/bin/python
+    mv websockify-${WEB_SOCK_VER} /novnc/utils/websockify
 EXPOSE 8080
 ENV PATH_PREFIX=/ \
     VNC_RESIZE=scale \
