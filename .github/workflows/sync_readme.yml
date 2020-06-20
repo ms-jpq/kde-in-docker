@@ -4,7 +4,7 @@ name: Sync Readme
 on:
   push:
     branches:
-      - gates
+      - daddy
   schedule:
     - cron: "0 0 * * *" # daily
 
@@ -12,13 +12,13 @@ on:
 jobs:
   sync:
     strategy:
-    matrix:
-      repository:
-        - kde-vnc
-        - adobe-acrobat-vnc
-        - firefox-vnc
-        - motrix-vnc
-        - wine-vnc
+      matrix:
+        repository:
+          - kde-vnc
+          - adobe-acrobat-vnc
+          - firefox-vnc
+          - motrix-vnc
+          - wine-vnc
     runs-on: ubuntu-latest
 
     steps:
