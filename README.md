@@ -61,7 +61,7 @@ This is your password even under non-root user
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/firefox-vnc`
 
-![firefox preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/firefox.png)
+![firefox preview.png](https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/firefox.png)
 
 ---
 
@@ -75,7 +75,7 @@ Adobe PDF Reader `9.5.5`
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/adobe-acrobat-vnc`
 
-![acrobat preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/acrobat.png)
+![acrobat preview.png](https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/acrobat.png)
 
 ---
 
@@ -89,7 +89,7 @@ Really cool download client. [https://motrix.app/](https://motrix.app/)
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/motrix-vnc`
 
-![motrix preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/motrix.png)
+![motrix preview.png](https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/motrix.png)
 
 ---
 
@@ -101,7 +101,7 @@ KDE on 18.04 lts. `620MB`
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:bionic`
 
-![bionic preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/bionic.png)
+![bionic preview.png](https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/bionic.png)
 
 ---
 
@@ -113,7 +113,7 @@ KDE on 20.04 lts. `730MB`
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/kde-vnc:focal`
 
-![focal preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/focal.png)
+![focal preview.png](https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/focal.png)
 
 ---
 
@@ -125,4 +125,4 @@ WINE 5.3 with dependencies. `1.3GB`
 
 **RUN** - `docker run -p 8080:8080 -p 5900:5900 msjpq/wine-vnc:bionic`
 
-![wine preview.png](https://github.com/ms-jpq/kde-in-docker/raw/master/preview/wine.png)
+![wine preview.png](https://github.com/ms-jpq/kde-in-docker/raw/daddy/preview/wine.png)
