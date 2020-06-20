@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - daddy
   pull_request:
     branches:
-      - master
+      - daddy
   schedule:
     - cron: "0 0 * * *" # daily
 
